@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physiotherapeut:in in Frankfurt mit Übernahme-Perspektive | PhysioVital</title>
+<meta name="description" content="30 Minuten pro Patient, Doku per Sprache, eigene Praxis in 3 bis 5 Jahren. Bewirb Dich in 60 Sekunden, ohne Anschreiben und ohne Lebenslauf.">
+<meta property="og:title" content="Physiotherapeut:in in Frankfurt mit Übernahme-Perspektive">
+<meta property="og:description" content="30 Minuten pro Patient, Feierabend ohne Doku und eine Praxis, die Du in 3 bis 5 Jahren übernimmst. Bewirb Dich in 60 Sekunden.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2e6b5e;
+  --green-dark:#1f4a41;
+  --green-light:#e7f0ed;
+  --cream:#faf7f2;
+  --sand:#f1ebe1;
+  --ink:#22302c;
+  --ink-soft:#5a6b66;
+  --accent:#d97b4f;
+  --accent-dark:#c0663d;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 6px 20px rgba(34,48,44,.09);
+  --font-head:'Fraunces',Georgia,serif;
+  --font-body:'Inter',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.55;font-size:15px}
+h1,h2,h3{font-family:var(--font-head);line-height:1.18;color:var(--ink)}
+.wrap{max-width:520px;margin:0 auto;padding:0 20px;text-align:center}
+section{padding:44px 0}
+.kicker{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.section-title{font-size:clamp(22px,5.8vw,28px);margin-bottom:10px}
+.section-sub{color:var(--ink-soft);font-size:15px;margin-bottom:24px}
+
+/* Bild-Container: zeigt Platzhalter, bis ein Bild in assets/ liegt */
+.ph{position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#dfe8e4,#dfe8e4 12px,#d3dfda 12px,#d3dfda 24px);border:2px dashed #a9bdb6;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#5f7a72;font-size:12px;font-weight:600;text-align:center;padding:12px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.ph.contain img{object-fit:contain}
+.ph.has-img{background:none;border-style:solid;border-color:transparent}
+.ph.has-img>span{display:none}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.93);backdrop-filter:blur(8px);border-bottom:1px solid #e8e1d5}
+.header-in{max-width:520px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo-ph{width:110px;height:30px;border-radius:7px;font-size:10px}
+.header-cta{font-size:13px;font-weight:600;color:var(--white);background:var(--green);padding:8px 14px;border-radius:99px;text-decoration:none;white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;width:100%;max-width:400px;background:var(--accent);color:var(--white);font-family:var(--font-body);font-size:16px;font-weight:700;padding:15px 24px;border:none;border-radius:99px;cursor:pointer;text-decoration:none;box-shadow:0 5px 16px rgba(217,123,79,.35);transition:transform .15s,background .15s}
+.btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-note{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:9px}
+
+/* Hero */
+.hero{padding:38px 0 46px;background:linear-gradient(180deg,var(--cream) 0%,var(--sand) 100%)}
+.hero h1{font-size:clamp(26px,7vw,34px);margin-bottom:12px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero .lead{font-size:15.5px;color:var(--ink-soft);margin-bottom:22px}
+.trust{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:22px;align-items:center}
+.trust li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:500;text-align:left;max-width:340px}
+.trust li::before{content:"✓";flex:none;width:19px;height:19px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.hero-img{margin:18px auto 20px;width:100%;max-width:400px;aspect-ratio:1/1;height:auto}
+
+/* Pain */
+.pain{background:var(--green-dark);color:#e9f1ee}
+.pain .kicker{color:#9fc3b9}
+.pain .section-title{color:#fff}
+.pain-list{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.pain-item{background:rgba(255,255,255,.07);border-radius:10px;padding:13px 16px;font-size:14.5px}
+.pain-bridge{margin-top:24px;font-family:var(--font-head);font-size:18px;color:#fff}
+
+/* Benefits */
+.benefits{background:var(--sand)}
+.bene{background:var(--white);border-radius:var(--radius);padding:18px 18px 16px;box-shadow:var(--shadow);margin-bottom:12px}
+.bene h3{font-size:16.5px;margin-bottom:5px}
+.bene h3 .num{color:var(--accent);margin-right:6px}
+.bene p{font-size:13.5px;color:var(--ink-soft)}
+
+/* Gehalt */
+.pay-card{background:var(--green-dark);color:#fff;border-radius:var(--radius);padding:24px 20px;box-shadow:var(--shadow)}
+.pay-card .big{font-family:var(--font-head);font-size:29px;margin:4px 0 2px}
+.pay-card .sub{color:#b9d2ca;font-size:13.5px;margin-bottom:15px}
+.pay-card ul{list-style:none;display:flex;flex-direction:column;gap:9px;align-items:center}
+.pay-card li{display:flex;gap:8px;font-size:13.5px;text-align:left;max-width:360px}
+.pay-card li::before{content:"+";flex:none;font-weight:700;color:var(--accent)}
+
+/* Phasen */
+.phase{background:var(--white);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:12px}
+.phase .when{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.phase h3{font-size:16.5px;margin:4px 0 5px}
+.phase p{font-size:13.5px;color:var(--ink-soft)}
+
+/* Conny Mini */
+.conny-strip{background:var(--green-light);border-radius:var(--radius);padding:22px 20px;margin-top:20px}
+.conny-face{width:84px;height:84px;border-radius:50%;margin:0 auto 12px;font-size:10px}
+.conny-face img{border-radius:50%}
+.conny-strip p{font-size:14px;color:var(--ink);margin-bottom:6px}
+.signature{font-family:var(--font-head);font-size:19px;color:var(--green)}
+
+/* Fit / No-Fit */
+.fit-card{border-radius:var(--radius);padding:20px;margin-bottom:14px;text-align:left}
+.fit-yes{background:var(--white);box-shadow:var(--shadow)}
+.fit-no{background:var(--sand);border:1px solid #e3dac9}
+.fit-card h3{font-size:17px;margin-bottom:12px;text-align:center}
+.fit-card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fit-card li{display:flex;gap:9px;font-size:13.5px;align-items:flex-start}
+.fit-yes li::before{content:"✓";flex:none;color:var(--green);font-weight:700}
+.fit-no li::before{content:"✕";flex:none;color:var(--accent-dark);font-weight:700}
+.fit-note{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+
+/* Schritte */
+.steps{background:var(--sand)}
+.step{display:flex;gap:13px;margin-bottom:16px;text-align:left;max-width:400px;margin-left:auto;margin-right:auto}
+.step .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--font-head);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:15.5px;margin-bottom:2px}
+.step p{font-size:13px;color:var(--ink-soft)}
+
+/* Final CTA */
+.final{background:var(--green-dark);color:#fff}
+.final .section-title{color:#fff}
+.final p{color:#b9d2ca;margin-bottom:22px;font-size:15px}
+.final .btn-note{color:#b9d2ca}
+
+/* Footer */
+footer{padding:26px 0 100px;text-align:center;font-size:12px;color:var(--ink-soft)}
+footer a{color:var(--ink-soft)}
+
+/* Sticky Mobile CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(250,247,242,.95);backdrop-filter:blur(8px);border-top:1px solid #e8e1d5;text-align:center}
+.sticky-cta .btn{padding:13px 20px;font-size:15px}
+
+/* Funnel Overlay */
+.funnel{position:fixed;inset:0;z-index:100;background:var(--cream);display:none;flex-direction:column;overflow-y:auto}
+.funnel.open{display:flex}
+.funnel-head{position:sticky;top:0;background:var(--cream);padding:14px 20px 10px;z-index:5}
+.funnel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.funnel-top .t{font-weight:700;font-size:13px;color:var(--green-dark)}
+.funnel-close{background:none;border:none;font-size:24px;color:var(--ink-soft);cursor:pointer;line-height:1;padding:4px}
+.progress{height:6px;background:#e4ddd0;border-radius:99px;overflow:hidden}
+.progress-bar{height:100%;width:25%;background:var(--green);border-radius:99px;transition:width .3s}
+.funnel-body{flex:1;max-width:500px;width:100%;margin:0 auto;padding:22px 20px 44px;text-align:center}
+.fstep{display:none;animation:fade .25s ease}
+.fstep.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.fstep .q-num{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.fstep h2{font-size:clamp(20px,5.6vw,25px);margin-bottom:7px}
+.fstep .hint{color:var(--ink-soft);font-size:13.5px;margin-bottom:20px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{width:100%;text-align:left;background:var(--white);border:2px solid #e4ddd0;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s;display:flex;align-items:center;gap:11px}
+.opt:hover{border-color:var(--green)}
+.opt.selected{border-color:var(--green);background:var(--green-light)}
+.opt .emoji{font-size:18px;flex:none}
+.opt small{display:block;font-weight:400;font-size:12px;color:var(--ink-soft)}
+.fnav{display:flex;justify-content:center;margin-top:22px}
+.back-link{background:none;border:none;font-size:13.5px;font-weight:600;color:var(--ink-soft);cursor:pointer;padding:10px;text-decoration:underline}
+.field{margin-bottom:13px;text-align:left}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+.field input{width:100%;padding:13px 14px;font-size:16px;font-family:var(--font-body);border:2px solid #e4ddd0;border-radius:11px;background:var(--white);color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--green)}
+.consent{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--ink-soft);margin:15px 0 18px;text-align:left}
+.consent input{margin-top:3px;width:17px;height:17px;flex:none}
+.error-msg{display:none;color:#b3402a;font-size:13px;font-weight:600;margin-top:10px}
+.success{padding:34px 0}
+.success .check{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.success h2{font-size:24px;margin-bottom:10px}
+.success p{color:var(--ink-soft);font-size:14.5px;margin-bottom:7px}
+.success .phone{font-weight:700;color:var(--green-dark);font-size:17px;margin-top:13px}
+
+/* Desktop */
+@media(min-width:760px){
+  section{padding:60px 0}
+  .sticky-cta{display:none}
+  footer{padding-bottom:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header>
+  <div class="header-in">
+    <div class="ph logo-ph contain"><img src="assets/physiovital.webp" alt="PhysioVital Logo" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><span>LOGO</span></div>
+    <a class="header-cta" href="#" onclick="openFunnel();return false;">Jetzt bewerben</a>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Physiotherapeut:in (m/w/d) · Frankfurt · Voll- oder Teilzeit</span>
+    <h1>Endlich wieder <em>mit Ruhe behandeln.</em> Und in 5 Jahren Deine eigene Praxis führen.</h1>
+    <div class="ph hero-img"><img src="assets/hero.jpg" alt="Conny in der Praxis mit Patientin" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><span>BILD-PLATZHALTER<br>assets/hero.jpg (1:1)</span></div>
+    <p class="lead">30 Minuten pro Patient. Deine Doku ist fertig, bevor der Patient die Tür hinter sich schließt. Und eine Inhaberin, die Dir die Praxis in 3 bis 5 Jahren übergibt. Mit klarem Plan.</p>
+    <button class="btn" onclick="openFunnel()">Jetzt in 60 Sekunden bewerben</button>
+    <span class="btn-note">3 kurze Fragen statt Anschreiben. Rückruf innerhalb von 24 Stunden.</span>
+    <ul class="trust">
+      <li>Seit 1988 inhabergeführt. Nie verkauft, nie Kette geworden.</li>
+      <li>30 Minuten pro Patient. Als Standard, nicht als Ausnahme.</li>
+      <li>Klarer Nachfolge-Pfad: erst Praxisleitung, dann Übernahme.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======= PAIN ======= -->
+<section class="pain">
+  <div class="wrap">
+    <span class="kicker">Vielleicht kennst Du das</span>
+    <h2 class="section-title">Wenn die Liste wichtiger geworden ist als die Person darauf.</h2>
+    <div class="pain-list">
+      <div class="pain-item">Du erinnerst Dich abends nicht mehr, was Patient 3 heute Morgen erzählt hat.</div>
+      <div class="pain-item">Deine Doku wartet am Feierabend auf Dich. Wie an jedem Tag dieser Woche.</div>
+      <div class="pain-item">Du arbeitest die Liste ab, statt wirklich zu behandeln.</div>
+    </div>
+    <p class="pain-bridge">Es muss nicht so sein. Hier ist der Beweis.</p>
+  </div>
+</section>
+
+<!-- ======= BENEFITS ======= -->
+<section class="benefits">
+  <div class="wrap">
+    <span class="kicker">Das bekommst Du hier</span>
+    <h2 class="section-title">Sechs Dinge, die Deinen Arbeitsalltag sofort verändern.</h2>
+    <p class="section-sub">In den meisten Praxen undenkbar. Hier der Normalfall.</p>
+    <div class="bene"><h3><span class="num">01</span>Du behandelst 30 Minuten pro Patient</h3><p>Zeit für Befund, Behandlung und das eine Gespräch, das den Unterschied macht. Bei jedem Termin.</p></div>
+    <div class="bene"><h3><span class="num">02</span>Deine Doku ist fertig, wenn der Patient geht</h3><p>Du sprichst sie während der Behandlung ein. Dein Feierabend beginnt um 16 Uhr, nicht am Schreibtisch.</p></div>
+    <div class="bene"><h3><span class="num">03</span>Dein Dienstplan passt sich Deinem Leben an</h3><p>Kernzeit von 10 bis 16 Uhr, zweimal pro Woche früher, zweimal später. Teilzeit ist möglich.</p></div>
+    <div class="bene"><h3><span class="num">04</span>Deine Weiterbildung zahlt die Praxis mit</h3><p>Manuelle Therapie, Neurologie, ganzheitliche Ansätze. Du wirst besser, ohne dass Dein Konto leidet.</p></div>
+    <div class="bene"><h3><span class="num">05</span>Du baust Dir Deinen eigenen Schwerpunkt auf</h3><p>Online-Termine, Bewegungsanalysen, individuelle Programme. Dein Fokus trägt Deinen Namen.</p></div>
+    <div class="bene"><h3><span class="num">06</span>Du arbeitest ohne Hierarchie-Spielchen</h3><p>Du-Kultur, klare Absprachen, Humor im Alltag. Probleme werden angesprochen, nicht ausgesessen.</p></div>
+  </div>
+</section>
+
+<!-- ======= GEHALT ======= -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Klartext beim Geld</span>
+    <h2 class="section-title">Du weißt vor dem ersten Gespräch, was Du verdienst.</h2>
+    <div class="pay-card">
+      <div class="big">26 bis 30 € pro Stunde</div>
+      <div class="sub">je nach Erfahrung und Qualifikation, transparent von Anfang an</div>
+      <ul>
+        <li>Weiterbildungen wie Manuelle Therapie zahlt die Praxis mit</li>
+        <li>Mit der Praxisleitung wächst Deine Verantwortung und Dein Gehalt</li>
+        <li>Ab der Übernahme arbeitest Du in Deiner eigenen Praxis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======= PHASEN + CONNY ======= -->
+<section style="background:var(--sand)">
+  <div class="wrap">
+    <span class="kicker">Mehr als ein Job</span>
+    <h2 class="section-title">In drei Phasen zur eigenen Praxis.</h2>
+    <p class="section-sub">Du kaufst die Praxis nicht von außen. Du wächst hinein.</p>
+    <div class="phase"><span class="when">Phase 1 · ab Tag 1</span><h3>Du startest als Therapeut:in mit Leitungsperspektive.</h3><p>Eigene Patienten, eigene Schwerpunkte, Rückendeckung inklusive.</p></div>
+    <div class="phase"><span class="when">Phase 2 · in 3 bis 5 Jahren</span><h3>Du übernimmst die Praxis. Schritt für Schritt.</h3><p>Die finanziellen Details klärt Ihr in Ruhe, sobald klar ist, dass es passt.</p></div>
+    <div class="phase"><span class="when">Phase 3 · danach</span><h3>Die Inhaberin bleibt als Mentorin an Deiner Seite.</h3><p>So lange Du sie brauchst. Eine echte Übergabe, kein Schlüssel-ab-und-viel-Glück.</p></div>
+    <div class="conny-strip">
+      <div class="ph conny-face"><img src="assets/conny.jpg" alt="Conny Brucks, Inhaberin" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><span>FOTO<br>Conny</span></div>
+      <p>„1988 habe ich PhysioVital gegründet. Nie verkauft, nie Kette geworden. Jetzt suche ich genau eine Person, die die Praxis mit mir weiterträgt und sie eines Tages übernimmt.“</p>
+      <p class="signature">Conny Brucks, Inhaberin</p>
+    </div>
+    <div style="margin-top:24px">
+      <button class="btn" onclick="openFunnel()">Sichere Dir das Gespräch mit Conny</button>
+      <span class="btn-note">Es gibt genau eine Nachfolge. Sie geht an die Person, bei der es zuerst passt.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FIT / NO-FIT ======= -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Wen wir suchen und wen nicht</span>
+    <h2 class="section-title">Lieber ehrlich, bevor wir beide Zeit verlieren.</h2>
+    <div class="fit-card fit-yes">
+      <h3>Es passt, wenn …</h3>
+      <ul>
+        <li>Du Menschen wirklich hilfst, statt sie abzuarbeiten.</li>
+        <li>Du eigenständig denkst und eigene Ideen einbringst.</li>
+        <li>Du fachlich wachsen willst, ob Berufsanfänger:in oder mit 15 Jahren Erfahrung.</li>
+        <li>Du Lust hast, eines Tages mehr zu sein als Therapeut:in.</li>
+      </ul>
+    </div>
+    <div class="fit-card fit-no">
+      <h3>Es passt nicht, wenn …</h3>
+      <ul>
+        <li>Du 20-Minuten-Slots für normal hältst und das nicht hinterfragen willst.</li>
+        <li>„Nicht meine Aufgabe“ zu Deinen häufigsten Sätzen gehört.</li>
+        <li>Du überall nach drei Monaten unzufrieden warst. Und es immer an den anderen lag.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======= SCHRITTE ======= -->
+<section class="steps">
+  <div class="wrap">
+    <span class="kicker">So läuft es weiter</span>
+    <h2 class="section-title">Drei Schritte, null Papierkram.</h2>
+    <div class="step"><div class="n">1</div><div><h3>Du beantwortest drei kurze Fragen.</h3><p>Danach Name, E-Mail, Handynummer. Das dauert 60 Sekunden.</p></div></div>
+    <div class="step"><div class="n">2</div><div><h3>Conny ruft Dich innerhalb von 24 Stunden an.</h3><p>20 Minuten Telefonat. Sie lernt Dich kennen, Du lernst sie kennen.</p></div></div>
+    <div class="step"><div class="n">3</div><div><h3>Du hospitierst einen halben Tag.</h3><p>Du siehst Praxis, Team und Alltag. Dann entscheidet Ihr beide.</p></div></div>
+    <p class="fit-note">Kein Anschreiben. Kein Foto. Kein Lebenslauf.</p>
+  </div>
+</section>
+
+<!-- ======= FINAL CTA ======= -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="section-title">Diese Stelle gibt es genau einmal.</h2>
+    <p>Eine Praxis. Eine Nachfolge. Eine Person. Wenn Du beim Lesen gedacht hast, dass das nach Dir klingt, dann warte nicht, bis jemand anderes schneller war.</p>
+    <button class="btn" onclick="openFunnel()">Jetzt in 60 Sekunden bewerben</button>
+    <span class="btn-note">Drei Fragen, Deine Nummer, fertig. Morgen telefonierst Du mit Conny.</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    PhysioVital Frankfurt · Homburger Landstraße 46 F, 60435 Frankfurt · <a href="tel:+49695484858">069 5484858</a><br>
+    <a href="https://physiovital-frankfurt.de/impressum/">Impressum</a> · <a href="https://physiovital-frankfurt.de/datenschutzerklaerung/">Datenschutzerklärung</a>
+  </div>
+</footer>
+
+<!-- ======= STICKY MOBILE CTA ======= -->
+<div class="sticky-cta">
+  <button class="btn" onclick="openFunnel()">In 60 Sekunden bewerben</button>
+</div>
+
+<!-- ======= FUNNEL OVERLAY ======= -->
+<div class="funnel" id="funnel" role="dialog" aria-modal="true">
+  <div class="funnel-head">
+    <div class="funnel-top">
+      <span class="t">Deine Bewerbung: 60 Sekunden</span>
+      <button class="funnel-close" onclick="closeFunnel()" aria-label="Schließen">×</button>
+    </div>
+    <div class="progress"><div class="progress-bar" id="pbar"></div></div>
+  </div>
+  <div class="funnel-body">
+
+    <!-- Schritt 1: Gehalt -->
+    <div class="fstep active" data-step="1">
+      <div class="q-num">Frage 1 von 3</div>
+      <h2>Welche Gehaltsvorstellung hast Du?</h2>
+      <p class="hint">Antworte ehrlich. Es gibt kein Falsch, hier wird offen über Geld gesprochen.</p>
+      <div class="opts" data-key="gehalt">
+        <button class="opt"><span class="emoji">💶</span>Unter 2.800 € brutto im Monat</button>
+        <button class="opt"><span class="emoji">💶</span>2.800 bis 3.200 € brutto im Monat</button>
+        <button class="opt"><span class="emoji">💶</span>3.200 bis 3.600 € brutto im Monat</button>
+        <button class="opt"><span class="emoji">💶</span>Über 3.600 € brutto im Monat</button>
+      </div>
+    </div>
+
+    <!-- Schritt 2: Erfahrung -->
+    <div class="fstep" data-step="2">
+      <div class="q-num">Frage 2 von 3</div>
+      <h2>Wie viel Erfahrung hast Du als Physiotherapeut:in?</h2>
+      <p class="hint">Berufsanfänger:innen sind genauso willkommen wie alte Hasen.</p>
+      <div class="opts" data-key="erfahrung">
+        <button class="opt"><span class="emoji">🌱</span>Noch in Ausbildung oder frisch fertig</button>
+        <button class="opt"><span class="emoji">💪</span>1 bis 3 Jahre</button>
+        <button class="opt"><span class="emoji">⭐</span>4 bis 7 Jahre</button>
+        <button class="opt"><span class="emoji">🏆</span>Mehr als 7 Jahre</button>
+      </div>
+      <div class="fnav"><button class="back-link" onclick="goStep(1)">← Zurück</button></div>
+    </div>
+
+    <!-- Schritt 3: Übernahme -->
+    <div class="fstep" data-step="3">
+      <div class="q-num">Frage 3 von 3</div>
+      <h2>Kannst Du Dir vorstellen, später einmal eine Praxis zu übernehmen?</h2>
+      <p class="hint">Kein Muss. Aber genau diese Perspektive bekommst Du hier.</p>
+      <div class="opts" data-key="uebernahme">
+        <button class="opt"><span class="emoji">🔥</span>Ja, das reizt mich sehr<small>Genau deshalb schaue ich mir diese Stelle an.</small></button>
+        <button class="opt"><span class="emoji">🤔</span>Vielleicht, ich will mehr darüber erfahren<small>Offen dafür, aber noch mit Fragen.</small></button>
+        <button class="opt"><span class="emoji">🙂</span>Eher nicht, ich will erstmal gut behandeln<small>Auch okay. Redet trotzdem miteinander.</small></button>
+      </div>
+      <div class="fnav"><button class="back-link" onclick="goStep(2)">← Zurück</button></div>
+    </div>
+
+    <!-- Schritt 4: Opt-in -->
+    <div class="fstep" data-step="4">
+      <div class="q-num">Fast geschafft</div>
+      <h2>Wohin darf Conny Dich anrufen?</h2>
+      <p class="hint">Sie meldet sich innerhalb von 24 Stunden persönlich bei Dir. Kein HR, kein Callcenter, keine Warteschleife.</p>
+      <form id="optinForm" novalidate>
+        <div class="field"><label for="f-name">Vorname & Name</label><input type="text" id="f-name" name="name" autocomplete="name" placeholder="z. B. Julia Weber" required></div>
+        <div class="field"><label for="f-mail">E-Mail</label><input type="email" id="f-mail" name="email" autocomplete="email" placeholder="julia@beispiel.de" required></div>
+        <div class="field"><label for="f-tel">Handynummer</label><input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="0151 23456789" required></div>
+        <label class="consent"><input type="checkbox" id="f-consent" required><span>Ich habe die <a href="https://physiovital-frankfurt.de/datenschutzerklaerung/" style="color:var(--green)">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Bewerbung gespeichert und verarbeitet werden.</span></label>
+        <button type="submit" class="btn" style="max-width:none;width:100%">Bewerbung absenden und Rückruf sichern</button>
+        <div class="error-msg" id="errMsg">Bitte fülle alle Felder aus und bestätige den Datenschutz.</div>
+      </form>
+      <div class="fnav"><button class="back-link" onclick="goStep(3)">← Zurück</button></div>
+    </div>
+
+    <!-- Schritt 5: Danke -->
+    <div class="fstep" data-step="5">
+      <div class="success">
+        <div class="check">✓</div>
+        <h2>Deine Bewerbung ist raus!</h2>
+        <p>Conny ruft Dich <strong>innerhalb von 24 Stunden</strong> persönlich an.</p>
+        <p>Speichere Dir am besten jetzt schon die Nummer ein, damit Du weißt, wer anruft:</p>
+        <p class="phone">📞 069 5484858</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ==========================================================
+// KONFIGURATION: Bewerbungen per E-Mail erhalten
+//
+// HOSTING AUF VERCEL (empfohlen, siehe README):
+// Die Funktion api/bewerbung.js wird automatisch mitdeployt.
+// WEBHOOK_URL auf "/api/bewerbung" lassen und im Vercel-Projekt
+// die drei Environment-Variablen setzen (RESEND_API_KEY,
+// MAIL_ABSENDER, MAIL_EMPFAENGER). Fertig.
+//
+// ALTERNATIVE 1 (WordPress-Hosting): send-bewerbung.php per FTP
+// auf physiovital-frankfurt.de hochladen und hier eintragen:
+//   const WEBHOOK_URL = "https://physiovital-frankfurt.de/send-bewerbung.php";
+//
+// ALTERNATIVE 2 (schnellster Weg): Web3Forms-Key eintragen,
+// siehe README. Beim lokalen Testen (Datei direkt im Browser)
+// landen Bewerbungen nur in der Konsole (F12), das ist normal.
+// ==========================================================
+const WEB3FORMS_KEY = "";
+const WEBHOOK_URL = "/api/bewerbung";
+
+const funnel = document.getElementById('funnel');
+const pbar = document.getElementById('pbar');
+const answers = {};
+let current = 1;
+const TOTAL = 4; // Schritte mit Progress (Danke = 100%)
+
+function openFunnel(){
+  funnel.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  goStep(1);
+}
+function closeFunnel(){
+  funnel.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function goStep(n){
+  current = n;
+  document.querySelectorAll('.fstep').forEach(s => s.classList.toggle('active', +s.dataset.step === n));
+  pbar.style.width = Math.min(n / TOTAL * 100, 100) + '%';
+  funnel.scrollTop = 0;
+}
+
+// Antwort-Buttons: auswaehlen + automatisch weiter
+document.querySelectorAll('.opts').forEach(group => {
+  group.querySelectorAll('.opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      group.querySelectorAll('.opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      answers[group.dataset.key] = btn.textContent.trim();
+      setTimeout(() => goStep(current + 1), 250);
+    });
+  });
+});
+
+// Opt-in Formular
+document.getElementById('optinForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = document.getElementById('f-name').value.trim();
+  const mail = document.getElementById('f-mail').value.trim();
+  const tel  = document.getElementById('f-tel').value.trim();
+  const ok   = document.getElementById('f-consent').checked;
+  const err  = document.getElementById('errMsg');
+  if(!name || !mail.includes('@') || tel.length < 6 || !ok){
+    err.style.display = 'block';
+    return;
+  }
+  err.style.display = 'none';
+  answers.name = name; answers.email = mail; answers.tel = tel;
+  answers.quelle = 'physio-funnel';
+  answers.zeitpunkt = new Date().toISOString();
+
+  // Versand per E-Mail (Web3Forms)
+  if(WEB3FORMS_KEY){
+    try{
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: 'Neue Bewerbung: ' + name,
+          from_name: 'PhysioVital Recruiting-Funnel',
+          'Name': name,
+          'E-Mail': mail,
+          'Telefon': tel,
+          'Gehaltsvorstellung': answers.gehalt || '',
+          'Erfahrung': answers.erfahrung || '',
+          'Praxisuebernahme': answers.uebernahme || ''
+        })
+      });
+    }catch(fehler){
+      console.error('Mail-Versand-Fehler:', fehler);
+    }
+  }
+
+  // Optionaler Zusatz-Versand an Make/Zapier/n8n
+  if(WEBHOOK_URL){
+    try{
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(answers)
+      });
+    }catch(fehler){
+      console.error('Webhook-Fehler:', fehler);
+    }
+  }
+
+  if(!WEB3FORMS_KEY && !WEBHOOK_URL){
+    console.log('Bewerbung (noch kein Versand konfiguriert):', answers);
+  }
+
+  goStep(5);
+});
+
+// ESC schliesst Funnel
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeFunnel(); });
+</script>
+</body>
+</html>
