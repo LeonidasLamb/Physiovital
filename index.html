@@ -135,14 +135,10 @@ header.scrolled{background:rgba(250,247,242,.85);backdrop-filter:blur(14px) satu
 .hero h1 .hl svg{position:absolute;left:0;bottom:-.12em;width:100%;height:.32em;overflow:visible}
 .hero h1 .hl path{stroke:var(--accent);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1s var(--ease) .6s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.hero .lead{font-size:clamp(17px,1.6vw,19px);color:var(--ink-soft);margin-bottom:28px;max-width:540px}
-.hero .lead strong{color:var(--ink);font-weight:600}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px;max-width:560px}
-.fact{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 12px;transition:transform .3s var(--ease),box-shadow .3s}
-.fact:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.fact b{display:block;font-family:var(--font-head);font-size:clamp(20px,2.4vw,28px);font-weight:600;color:var(--green-dark);line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.fact b small{display:block;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--ink-soft);letter-spacing:0;margin-bottom:2px}
-.fact>span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px;line-height:1.35}
+.hero-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:0 0 30px}
+.hero-points li{display:flex;align-items:center;gap:12px;font-size:clamp(16.5px,1.5vw,18px);color:var(--ink-soft)}
+.hero-points li strong{color:var(--ink);font-weight:600}
+.hero-points svg{width:34px;height:34px;flex:none;padding:7px;border-radius:10px;background:var(--green-100);color:var(--green)}
 .hero-visual{position:relative;max-width:520px;margin:0 auto;width:100%}
 .hero-img{border-radius:28px;overflow:hidden;aspect-ratio:1/1;box-shadow:var(--shadow-lg);background:var(--green-100)}
 .hero-img img{animation:imgIn 1.4s var(--ease)}
@@ -151,8 +147,8 @@ header.scrolled{background:rgba(250,247,242,.85);backdrop-filter:blur(14px) satu
 .float{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);border-radius:16px;box-shadow:var(--shadow);padding:12px 14px;display:flex;align-items:center;gap:11px;font-size:13px;line-height:1.3;opacity:0;animation:floatIn .8s var(--ease) forwards,bob 6s ease-in-out infinite}
 .float strong{display:block;font-size:15px;color:var(--ink)}
 .float span{color:var(--ink-soft)}
-.float--a{left:-14px;top:12%;animation-delay:.5s,1.3s}
-.float--b{right:-10px;bottom:10%;animation-delay:.7s,2s;animation-duration:.8s,7s}
+.float--a{left:-18px;bottom:-22px;animation-delay:.5s,1.3s}
+.float--b{right:-18px;top:-22px;animation-delay:.7s,2s;animation-duration:.8s,7s}
 @keyframes floatIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
 .ring{width:44px;height:44px;flex:none}
@@ -347,7 +343,7 @@ footer a{color:var(--ink-soft)}
 .funnel-body{flex:1;width:100%;padding:24px 22px 44px;text-align:center}
 .fstep{display:none}
 .fstep.active{display:block;animation:stepIn .45s var(--ease)}
-@keyframes stepIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes stepIn{from{transform:translateX(24px)}to{transform:none}}
 .q-num{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
 .fstep h2{font-size:clamp(22px,5.6vw,27px);margin-bottom:8px}
 .hint{color:var(--ink-soft);font-size:14.5px;margin-bottom:22px}
@@ -411,10 +407,13 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
 @media(max-width:759px){
   .hero-visual{max-width:420px}
   .hero h1{font-size:30px}
-  .float--a{left:-6px;top:auto;bottom:-18px}
+  .hero{padding-bottom:72px}
+  .hero-copy{text-align:center}
+  .chips{justify-content:center}
+  .hero-points{align-items:flex-start;width:max-content;max-width:100%;margin-left:auto;margin-right:auto;text-align:left}
+  .hero-cta .btn{width:100%;max-width:420px}
+  .float--a{left:0;right:0;margin:0 auto;width:max-content;bottom:-26px}
   .float--b{display:none}
-  .facts{gap:8px}
-  .fact{padding:12px 10px}
   .header-cta{padding:9px 14px;font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){
@@ -469,15 +468,14 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
         <span class="chip"><svg><use href="#i-cal"/></svg>Voll- oder Teilzeit</span>
       </div>
       <h1>Du bist nicht müde von der Physiotherapie. Nur vom <span class="hl">20-Minuten-Takt<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C 80 4, 200 4, 298 12"/></svg></span> und der Doku nach Feierabend.</h1>
-      <p class="lead">Bei PhysioVital hast Du <strong>30 Minuten pro Patient</strong>, sprichst die Doku direkt ein und verdienst <strong>bis zu 5.000 € brutto im Monat</strong>. In Vollzeit oder Teilzeit, ganz wie es in Dein Leben passt.</p>
-      <div>
-        <button class="btn" onclick="openFunnel()">In 60 Sekunden prüfen, ob es passt <svg class="arrow" width="18" height="18"><use href="#i-arrow"/></svg></button>
-        <span class="btn-note">3 kurze Fragen. Kein Lebenslauf. Conny ruft Dich innerhalb von 24 Stunden an.</span>
-      </div>
-      <div class="facts">
-        <div class="fact"><b><small>bis zu</small><span class="num" data-count="5000" data-format="de">5.000</span>&nbsp;€</b><span>brutto im Monat in Vollzeit</span></div>
-        <div class="fact"><b><small>immer</small><span class="num" data-count="30">30</span>&nbsp;Min.</b><span>pro Patient, bei jedem Termin</span></div>
-        <div class="fact"><b><small>nur</small><span class="num" data-count="0" data-from="45">0</span>&nbsp;Min.</b><span>Doku nach Feierabend</span></div>
+      <ul class="hero-points">
+        <li><svg><use href="#i-clock"/></svg><span><strong>30 Minuten</strong> pro Patient</span></li>
+        <li><svg><use href="#i-mic"/></svg><span>Doku per Sprache, <strong>kein Doku-Stau</strong></span></li>
+        <li><svg><use href="#i-euro"/></svg><span><strong>Bis zu 5.000 €</strong> brutto im Monat</span></li>
+      </ul>
+      <div class="hero-cta">
+        <button class="btn" onclick="openFunnel()">60-Sekunden-Check starten <svg class="arrow" width="18" height="18"><use href="#i-arrow"/></svg></button>
+        <span class="btn-note">3 kurze Fragen. Kein Lebenslauf. Rückruf in 24&nbsp;Stunden.</span>
       </div>
     </div>
     <div class="hero-visual">
@@ -933,7 +931,7 @@ document.getElementById('optinForm').addEventListener('submit', async e => {
     fillClocks();
     return;
   }
-  const targets = new Set(document.querySelectorAll('.reveal,.reveal-l,.sec-head,#compare,.facts'));
+  const targets = new Set(document.querySelectorAll('.reveal,.reveal-l,.sec-head,#compare'));
   function show(el){
     if(!targets.has(el)) return;
     targets.delete(el);
