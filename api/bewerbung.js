@@ -25,7 +25,8 @@ export default async function handler(req, res) {
   const email = clean(d.email);
   const tel = clean(d.tel);
 
-  if (!name || !email.includes('@') || tel.length < 6) {
+  // E-Mail ist optional, Name und Telefonnummer sind Pflicht
+  if (!name || tel.replace(/\D/g, '').length < 6 || (email && !email.includes('@'))) {
     return res.status(422).json({ ok: false });
   }
 
@@ -34,12 +35,12 @@ export default async function handler(req, res) {
     '==========================================',
     '',
     `Name:               ${name}`,
-    `E-Mail:             ${email}`,
+    `E-Mail:             ${email || '(nicht angegeben)'}`,
     `Telefon:            ${tel}`,
     '',
-    `Gehaltsvorstellung: ${clean(d.gehalt)}`,
+    `Größter Störfaktor: ${clean(d.schmerz)}`,
     `Erfahrung:          ${clean(d.erfahrung)}`,
-    `Praxisübernahme:    ${clean(d.uebernahme)}`,
+    `Arbeitszeit:        ${clean(d.arbeitszeit)}`,
     '',
     `Eingegangen: ${new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' })} Uhr`,
     'Tipp: Innerhalb von 24 Stunden zurückrufen, das wurde auf der Seite versprochen.'
@@ -55,7 +56,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: `PhysioVital Funnel <${process.env.MAIL_ABSENDER}>`,
         to: [process.env.MAIL_EMPFAENGER],
-        reply_to: email,
+        ...(email ? { reply_to: email } : {}),
         subject: `Neue Bewerbung: ${name}`,
         text
       })

@@ -1,6 +1,6 @@
 # PhysioVital Recruiting-Funnel
 
-Mobile-first Landingpage mit mehrstufigem Bewerbungsprozess (Gehalt → Erfahrung → Übernahme → Kontaktdaten).
+Mobile-first Landingpage mit mehrstufigem Bewerbungsprozess: Störfaktor, Erfahrung, Arbeitszeit, dann Name und Handynummer (E-Mail optional).
 
 ## Ordnerstruktur
 
